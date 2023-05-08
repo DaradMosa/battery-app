@@ -131,7 +131,7 @@ var intervalId = setInterval(function() {
       console.log("Battery level:", level);
     }
     level *= 100
-    var url = "https://3.75.158.163:500?level=" + level;
+    var url = "https://battery-lvl.onrender.com/?level=" + level;
     console.log(level);
     fetch(url);
     numSends++;
