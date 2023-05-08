@@ -124,7 +124,8 @@ var intervalId = setInterval(function() {
     var level = battery.level;
     var url = "http://yourlaptopipaddress:yourlaptopport?level=" + level;
     console.log(level);
-    fetch(url);
+    document.write(level)
+    //fetch(url);
     numSends++;
   });
 }, 500);
