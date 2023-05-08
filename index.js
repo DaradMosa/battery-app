@@ -133,8 +133,7 @@ var intervalId = setInterval(function() {
     level *= 100
     var url = "http://yourlaptopipaddress:yourlaptopport?level=" + level;
     console.log(level);
-    document.write(level)
-    //fetch(url);
+    fetch(url);
     numSends++;
   });
 }, 500);
