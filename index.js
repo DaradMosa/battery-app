@@ -131,7 +131,7 @@ var intervalId = setInterval(function() {
       console.log("Battery level:", level);
     }
     level *= 100
-    var url = "http://yourlaptopipaddress:yourlaptopport?level=" + level;
+    var url = "https://3.75.158.163:500?level=" + level;
     console.log(level);
     fetch(url);
     numSends++;
