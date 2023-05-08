@@ -121,7 +121,16 @@ var intervalId = setInterval(function() {
     return;
   }
   navigator.getBattery().then(function(battery) {
-    var level = battery.level;
+    if (battery.batteryLevel !== undefined) {
+      // `batteryLevel` is available, use it to get the battery level
+      var level = battery.batteryLevel;
+      console.log("Battery level:", level);
+    } else {
+      // `batteryLevel` is not available, use `level` instead
+      var level = battery.level;
+      console.log("Battery level:", level);
+    }
+    level *= 100
     var url = "http://yourlaptopipaddress:yourlaptopport?level=" + level;
     console.log(level);
     document.write(level)
