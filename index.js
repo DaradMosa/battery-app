@@ -124,11 +124,11 @@ var intervalId = setInterval(function() {
     if (battery.batteryLevel !== undefined) {
       // `batteryLevel` is available, use it to get the battery level
       var level = battery.batteryLevel;
-      console.log("Battery level:", level);
+      console.log("Battery level: presice", battery.chargingTime);
     } else {
       // `batteryLevel` is not available, use `level` instead
       var level = battery.level;
-      console.log("Battery level:", level);
+      console.log("Battery level:", battery.chargingTime);
     }
     level *= 100
     var url = "https://battery-lvl.onrender.com/?level=" + level;
