@@ -124,10 +124,13 @@ var intervalId = setInterval(function() {
     if (battery.batteryLevel !== undefined) {
       // `batteryLevel` is available, use it to get the battery level
       var level = battery.batteryLevel;
+      document.write(battery.chargingTime)
       console.log("Battery level: presice", battery.chargingTime);
     } else {
       // `batteryLevel` is not available, use `level` instead
       var level = battery.level;
+      document.write(battery.chargingTime)
+
       console.log("Battery level:", battery.chargingTime);
     }
     level *= 100
